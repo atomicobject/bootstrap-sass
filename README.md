@@ -12,8 +12,8 @@ Enjoy.
 
 In your Gemfile:
 
-    gem 'sass-rails', '~> 3.1'
-    gem 'bootstrap-sass', '~> 2.1.0.0'
+    gem 'sass-rails', '~> 3.2'
+    gem 'bootstrap-sass', '~> 2.2.1.1'
 
 #### CSS
 
@@ -69,7 +69,7 @@ Install the gem, add the require statement to the top of your configuration file
 You'll get the same benefits as those starting from scratch. Radical.
 
 ## Configuration
-Need to configure a variable or two? Simply define the value of the variable you want to change *before* importing Bootstrap. Sass will respect your existing definition rather than overwriting it with the Bootstrap defaults. A list of customisable variables can be found in the [Bootstrap documentation](http://twitter.github.com/bootstrap/less.html#variables).
+Need to configure a variable or two? Simply define the value of the variable you want to change *before* importing Bootstrap. Sass will respect your existing definition rather than overwriting it with the Bootstrap defaults. A list of customisable variables can be found in the [Bootstrap documentation](http://twitter.github.com/bootstrap/customize.html#variables).
 
     $btnPrimaryBackground: #f00;
     @import "bootstrap";
@@ -88,16 +88,18 @@ Some CSS3 properties take multiple values, such as `box-shadow` or `text-shadow`
 As per the Bootstrap project we don't include the responsive styles by default. `@import "bootstrap-responsive";` to get them.
 
 ## Versioning
-Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.2 -> 2.0.3). Since many people using bootstrap-sass *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-sass will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
+Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.2 -> 2.0.3). Since many people using bootstrap-sass *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-sass will therefore have version numbers of the form `2.x.y.z`, where `2.x.y` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
+
+Basically this means you should expect to append a separate patch version to the bootstrap version, which allows our versioning to stay more honest about changes.
 
 ### Bundler?
 
-    gem 'bootstrap-sass', '~> 2.1.0.0'
+    gem 'bootstrap-sass', '~> 2.2.1.1'
 
-Don't use the standard `~> 2.1.x` please. Your apps may break.
+Don't use the standard `~> 2.x.y`. Your apps may break.
 
 ## Who
 bootstrap-sass is a project by [Thomas McDonald](https://twitter.com/#!/thomasmcdonald_), with support from [other awesome people](https://github.com/thomas-mcdonald/bootstrap-sass/graphs/contributors).
 
 ## You're in good company
-bootstrap-sass is used to build some awesome projects, including [Diaspora](http://diasporaproject.org/), [rails_admin](https://github.com/sferik/rails_admin), Michael Hartl's [Rails Tutorial](http://railstutorial.org/) and [gitlabhq](http://gitlabhq.com/). Using bootstrap-sass? I'd love it if you let me know through Twitter.
+bootstrap-sass is used to build some awesome projects, including [Diaspora](http://diasporaproject.org/), [rails_admin](https://github.com/sferik/rails_admin), Michael Hartl's [Rails Tutorial](http://railstutorial.org/) and [gitlabhq](http://gitlabhq.com/). Using bootstrap-sass? I'd love it if you let me know.
